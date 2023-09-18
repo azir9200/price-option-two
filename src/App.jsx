@@ -1,7 +1,7 @@
 
 import './App.css'
 import NavBar from './Components/NavBar/NavBar'
-import DaisyNav from './Components/DaisyNav/DaisyNav'
+//import DaisyNav from './Components/DaisyNav/DaisyNav'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <>
 
       <NavBar></NavBar>
-      <DaisyNav></DaisyNav>
+      {/* <DaisyNav></DaisyNav> */}
       <h1 className="text-xl bg-green-500 " >Vite + React</h1>
 
     </>
