@@ -11,16 +11,15 @@ const NavBar = () => {
     { "id": 5, "path": "/products", "name": "Products" }
   ];
   return (
-    <nav className="text-black bg-yellow-400" >
-      <div onClick={() => setOpen(!open)} >
+    <nav className="text-black p-6 bg-yellow-400" >
+      <div className="text-2xl" onClick={() => setOpen(!open)} >
         {open === true ?
           <AiOutlineClose className="text-4xl"  ></AiOutlineClose>
 
-          : <AiOutlineMenu className=" md:hidden text-4xl" ></AiOutlineMenu>
+          : <AiOutlineMenu className=" text-4xl" ></AiOutlineMenu>
         }
       </div>
-      <ul className={`md:flex duration-1000  absolute  ${open ? 'top-20' : 'hidden'}
-       bg-red-700`} >
+      <ul className={`md:flex duration-1000  absolute  ${open ? 'top-14' : '-top-60'} bg-sky-400 p-8 `} >
         {
           routes.map(route => <Link key={route.id} route={route} ></Link>)
         }
