@@ -6,7 +6,7 @@ const PriceOption = ({ option }) => {
   const { id, name, price, billing_period, features } = option || {}
   console.log(features);
   return (
-    <div>
+    <div className="bg-blue-200 rounded-xl p-4  " >
       {/* <p> {features} </p> */}
 
       <h6 className="text-center" > {id} </h6>
@@ -16,9 +16,14 @@ const PriceOption = ({ option }) => {
         <span className="text-3xl" >/mon</span>
       </h2>
       <h4 className="text-3xl" >  {name} </h4>
+      <div className="pl-8" >
 
+        {
+          features && features.map((feature, index) => <Feature key={index} feature={feature} ></Feature>)
+        }
 
-
+      </div>
+      <button className="mt-12    bg-green-800  w-full  font-bold rounded-md  hover:bg-yellow-500" >Buy Now</button>
     </div>
   );
 };
